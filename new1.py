@@ -4,8 +4,8 @@ import requests
 
 url = input("podaj adres strony")
 webbrowser.open(url)
-#filename = "Kalimba.mp3"
-#Play_mp3.play(filename)
+filename = "Kalimba.mp3"
+Play_mp3.play(filename)
 
 daty = ["20200101", "20210202", "20220303"]
 
