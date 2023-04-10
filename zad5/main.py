@@ -1,5 +1,6 @@
 # This is a sample Python script.
-import smtplib from email.mime.text import MIMEText
+import smtplib
+from email.mime.text import MIMEText
 # Press Shift+F10 to execute it or replace it with your code.
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 
@@ -19,7 +20,8 @@ def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-def giveGrade(pkt):
+def giveGrade(punkt):
+    pkt=int(punkt)
     print("dodawanie ocen")
     if pkt<=50:
         return "2"
@@ -74,14 +76,12 @@ if __name__ == '__main__':
             student["status"]="GRADE"
         studenci.append(student)
 
-#   wysyłanie
-    send_email()
+    subject = "Email wysłany z Python'a"
+    body = "To jest wiadomość wysłana za pomocą SMTP"
+    sender = "test@gmail.com"
+    recipients = ["test2@gmail.com"]
+    password = "haslo app gmaila"
+    send_email(subject, body, sender, recipients, password)
 
 
 
-
-
-
-
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
